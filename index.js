@@ -1,8 +1,9 @@
-'use strict';
+/* jshint node:true */
+"use strict";
 
 var neocortex = module.exports = {
     actions: {},
-    commander: require('./commander')
+    commander: require('./lib/commander')
 };
 
 var actions = {

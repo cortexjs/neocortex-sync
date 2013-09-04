@@ -1,25 +1,17 @@
-'use strict';
+var assert = require('chai').assert,
+    conn = require('../lib/util/db');
 
-
-
-var conn = require('../lib/util/db');
-
-conn.query(
-    "SELECT CM_cortexPendingDependencies.PackageAffected, CM_cortexPendingDependencies.VersionAffected, CM_cortexDependencies.Dependencies FROM CM_cortexPendingDependencies INNER JOIN CM_cortexDependencies {{on on}} {{where where}}", {
-        on: {
-            'CM_cortexPendingDependencies.PackageAffected': 'CM_cortexDependencies.Package',
-            'CM_cortexPendingDependencies.VersionAffected': 'CM_cortexDependencies.Version'
-        },
-
-        where: {
-            'CM_cortexPendingDependencies.Package': 'b',
-            'CM_cortexPendingDependencies.Version': '0.0.1'
-        }
-    },
-    function(err, result) {
-        console.log(err, result);
-    }
-);
+describe('db.js', function() {
+    it('test query', function(done) {
+        conn.query(
+            "SELECT * FROM CM_cortexDependencies",
+            function(err, result) {
+                console.log(err, result);
+                done(err);
+            }
+        );
+    });
+});
 
 // function a(a, b, c) {
 //     a = 1;
