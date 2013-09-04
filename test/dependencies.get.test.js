@@ -7,22 +7,22 @@ describe('dependencies.get', function() {
             module: "fx@0.1.0"
         }, function(err, deps) {
             assert(deps.code === 200);
+            console.log(JSON.stringify(deps));
             done(err);
         });
     });
 
     it('get dependencies missing', function(done) {
         getDep({
-            module: "fx@0.2.0"
+            module: "fx@0.4.0"
         }, function(err, deps) {
             assert.equal(deps.code, 404);
             done(err);
         });
     });
 
-
     it('get really dependencies', function(done) {
-        this.timeout(10000);
+        this.timeout(20000);
         getDep({
             registry: "http://registry.npmjs.org/",
             module: "jade@0.35.0"

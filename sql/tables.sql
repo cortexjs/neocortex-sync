@@ -19,7 +19,7 @@ CREATE TABLE CM_cortexCombo
     Version varchar(20) NOT NULL,
     ComboId varchar(32) NOT NULL,
     PRIMARY KEY (Id),
-    FOREIGN KEY(Name, Version) REFERENCES CM_cortexDependencies(Name, Version)
+    FOREIGN KEY(Name, Version) REFERENCES CM_cortexDependencies(Name, Version) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -32,11 +32,11 @@ CREATE TABLE CM_cortexPendingDependencies
     NameAffected varchar(50) NOT NULL,
     VersionAffected varchar(20) NOT NULL,
     PRIMARY KEY (Id),
-    UNIQUE INDEX (Name, Version)
+    UNIQUE INDEX (Name, Version, NameAffected, VersionAffected)
 );
 
 
-CREATE TABLE CM_cortexCachedDepedencies
+CREATE TABLE CM_cortexCachedDependencies
 (
     Id int NOT NULL AUTO_INCREMENT,
     Name varchar(50) NOT NULL,
