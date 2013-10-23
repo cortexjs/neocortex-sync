@@ -6,7 +6,7 @@ var assert = require('chai').assert,
 describe('dependencies.save', function() {
     it('save dependencies', function(done) {
         saveDeps({
-            module: "jquery@1.9.2"
+            module: "align@0.1.0"
         }, function(err, result) {
             console.log(JSON.stringify(result));
             done(err);

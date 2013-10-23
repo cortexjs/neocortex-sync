@@ -6,13 +6,13 @@ describe('db.test', function() {
     it('db query', function(done) {
         conn.createConnection();
         assert(conn.connection.escape instanceof Function);
-        conn.query('SELECT * FROM CM_cortexDependencies', function(err, result) {
+        conn.query('SELECT * FROM CM_CortexDependencies', function(err, result) {
             done(err);
         });
     });
 
     it('db insert', function(done) {
-        conn.query('INSERT INTO CM_cortexDependencies {{values record}} ON DUPLICATE KEY {{update update}}', {
+        conn.query('INSERT INTO CM_CortexDependencies {{values record}} ON DUPLICATE KEY {{update update}}', {
             record: {
                 Name: 'am',
                 Version: '0.2.3',
@@ -27,7 +27,7 @@ describe('db.test', function() {
     });
 
     it('db query.where', function(done) {
-        conn.query('SELECT Name, Version, NameAffected, VersionAffected FROM CM_cortexPendingDependencies {{where where}}', {
+        conn.query('SELECT Name, Version, NameAffected, VersionAffected FROM CM_CortexPendingDependencies {{where where}}', {
             where: {
                 Name: 'fx',
                 Version: '0.1.0'
