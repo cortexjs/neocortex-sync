@@ -1,7 +1,7 @@
-drop table if exists CM_cortexCachedDependencies, CM_cortexPendingDependencies, CM_cortexCombo, CM_cortexDependencies;
+drop table if exists CM_CortexCachedDependencies, CM_CortexPendingDependencies, CM_CortexCombo, CM_CortexDependencies;
 
--- create CM_cortexDependencies
-CREATE TABLE CM_cortexDependencies
+-- create CM_CortexDependencies
+CREATE TABLE CM_CortexDependencies
 (
     Id int NOT NULL AUTO_INCREMENT,
     Name varchar(50) NOT NULL,
@@ -12,19 +12,19 @@ CREATE TABLE CM_cortexDependencies
 );
 
 
-CREATE TABLE CM_cortexCombo
+CREATE TABLE CM_CortexCombo
 (
     Id int NOT NULL AUTO_INCREMENT,
     Name varchar(50) NOT NULL,
     Version varchar(20) NOT NULL,
     ComboId varchar(32) NOT NULL,
     PRIMARY KEY (Id),
-    FOREIGN KEY(Name, Version) REFERENCES CM_cortexDependencies(Name, Version) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY(Name, Version) REFERENCES CM_CortexDependencies(Name, Version) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
--- create CM_cortexPendingDependencies
-CREATE TABLE CM_cortexPendingDependencies
+-- create CM_CortexPendingDependencies
+CREATE TABLE CM_CortexPendingDependencies
 (
     Id int NOT NULL AUTO_INCREMENT,
     Name varchar(50) NOT NULL, -- 
@@ -36,7 +36,7 @@ CREATE TABLE CM_cortexPendingDependencies
 );
 
 
-CREATE TABLE CM_cortexCachedDependencies
+CREATE TABLE CM_CortexCachedDependencies
 (
     Id int NOT NULL AUTO_INCREMENT,
     Name varchar(50) NOT NULL,

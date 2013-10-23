@@ -4,7 +4,7 @@ var assert = require('chai').assert,
 describe('combo.get', function() {
     it('test get', function(done) {
         getCombo({}, function(err, data) {
-            assert.equal(data.code, 200);
+            if(data) assert.equal(data.code, 200);
             done(err);
         });
     });
