@@ -1,7 +1,6 @@
-DROP VIEW IF EXISTS CM_cortexPendingCachedView;
+DROP VIEW IF EXISTS CM_CortexPendingCachedView;
 
-
-CREATE VIEW `CM_cortexPendingCachedView` AS
+CREATE VIEW `CM_CortexPendingCachedView` AS
     SELECT 
         a.Name,
         a.Version,
@@ -9,8 +8,8 @@ CREATE VIEW `CM_cortexPendingCachedView` AS
         a.VersionAffected,
         b.Dependencies
     FROM
-        CM_cortexPendingDependencies as a,
-        CM_cortexCachedDependencies b
+        CM_CortexPendingDependencies as a,
+        CM_CortexCachedDependencies b
     WHERE
         a.NameAffected = b.Name
             AND a.VersionAffected = b.Version
