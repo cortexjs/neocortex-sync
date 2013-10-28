@@ -1,4 +1,5 @@
-drop table if exists CM_CortexCachedDependencies, CM_CortexPendingDependencies, CM_CortexCombo, CM_CortexDependencies;
+drop table if exists CM_CortexCachedDependencies, CM_CortexPendingDependencies, 
+    CM_CortexCombo, CM_CortexDependencies;
 
 -- create CM_CortexDependencies
 CREATE TABLE CM_CortexDependencies
