@@ -3,7 +3,7 @@ var assert = require('chai').assert,
 
 
 describe('db.test', function() {
-    it('db query', function(done) {
+    it.only('db query', function(done) {
         conn.createConnection();
         assert(conn.connection.escape instanceof Function);
         conn.query('SELECT * FROM CM_CortexDependencies', function(err, result) {

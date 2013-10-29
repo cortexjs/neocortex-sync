@@ -28,7 +28,8 @@
     "fs-sync": "~0.1.6",
     "semver": "~2.1.0",
     "comfort": "0.1.11",
-    "express": "~3.2.6"
+    "express": "~3.2.6",
+    "path-extra": "~0.1.1"
   },
   "devDependencies": {
     "mocha": "~1.12.0",
