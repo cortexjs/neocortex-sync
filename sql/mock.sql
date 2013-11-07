@@ -1,7 +1,7 @@
-TRUNCATE TABLE CM_CortexDependencies;
+TRUNCATE TABLE CM_CortexPackageDependencies;
 TRUNCATE TABLE CM_CortexCombo;
 
-INSERT INTO CM_CortexDependencies  (Name, Version, Dependencies, Csses) 
+INSERT INTO CM_CortexPackageDependencies  (Name, Version, Dependencies, Csses) 
     VALUES ('type', '1.1.0', '', ''), ('type', '1.1.1', '', ''), ('type', '1.1.2', '', ''), ('type', '1.1.3', '', ''), 
     ('indexof', '0.3.0', '', ''), ('indexof', '0.3.1', '', ''), 
     ('jsonp', '0.0.1', 'type@~1.1.0,indexof@0.3.0', ''),
