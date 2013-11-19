@@ -29,7 +29,8 @@
     "semver": "~2.1.0",
     "comfort": "0.1.11",
     "express": "~3.2.6",
-    "path-extra": "~0.1.1"
+    "path-extra": "~0.1.1",
+    "lion-client": "git+ssh://git@code.dianpingoa.com:f2e/node-lion-client.git"
   },
   "devDependencies": {
     "mocha": "~1.12.0",
