@@ -1,4 +1,4 @@
-drop table if exists CM_CortexCachedDependencies, CM_CortexPendingDependencies, 
+drop table if exists CM_CortexCachedDependencies, CM_CortexPendingDependencies,
     CM_CortexCombo, CM_CortexPackageDependencies;
 
 -- create CM_CortexPackageDependencies
@@ -9,6 +9,7 @@ CREATE TABLE CM_CortexPackageDependencies
     Version varchar(20) NOT NULL,
     Dependencies text,
     Csses text,
+    Size int(11) COMMENT 'Gzipped size from compressed main file',
     PRIMARY KEY (Id),
     UNIQUE INDEX (Name, Version)
 );
@@ -29,7 +30,7 @@ CREATE TABLE CM_CortexCombo
 CREATE TABLE CM_CortexPendingDependencies
 (
     Id int NOT NULL AUTO_INCREMENT,
-    Name varchar(50) NOT NULL, -- 
+    Name varchar(50) NOT NULL, --
     Version varchar(20) NOT NULL,
     NameAffected varchar(50) NOT NULL,
     VersionAffected varchar(20) NOT NULL,
