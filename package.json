@@ -1,6 +1,6 @@
 {
   "name": "neocortex",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A provider for dependency analytics and combo strategy",
   "main": "index.js",
   "bin": {
@@ -30,7 +30,8 @@
     "comfort": "0.1.11",
     "express": "~3.2.6",
     "path-extra": "~0.1.1",
-    "dplion": "git+http://code.dianpingoa.com/f2e/lion.git"
+    "dplion": "git+http://code.dianpingoa.com/f2e/lion.git",
+    "underscore": "^1.6.0"
   },
   "devDependencies": {
     "mocha": "~1.12.0",

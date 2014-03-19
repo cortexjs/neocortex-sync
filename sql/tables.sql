@@ -8,6 +8,7 @@ CREATE TABLE CM_CortexPackageDependencies
     Name varchar(50) NOT NULL,
     Version varchar(20) NOT NULL,
     Dependencies text,
+    AsyncDependencies text,
     Csses text,
     Size int(11) COMMENT 'Gzipped size from compressed main file',
     PRIMARY KEY (Id),
