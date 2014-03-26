@@ -1,6 +1,6 @@
 {
   "name": "neocortex",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A provider for dependency analytics and combo strategy",
   "main": "index.js",
   "bin": {
