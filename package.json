@@ -1,22 +1,22 @@
 {
-  "name": "neocortex",
-  "version": "0.2.3",
+  "name": "neocortex-sync",
+  "version": "1.0.0",
   "description": "A provider for dependency analytics and combo strategy",
   "main": "index.js",
   "bin": {
-    "neocortex": "bin/neocortex-cli.js"
+    "neocortexsync": "bin/neocortex-cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/kaelzhang/neocortex.git"
+    "url": "git://github.com/cortexjs/neocortex-sync.git"
   },
   "author": "kael",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/kaelzhang/neocortex/issues"
+    "url": "https://github.com/cortexjs/neocortex-sync/issues"
   },
   "dependencies": {
     "mysql": "~2.0.0-alpha9",
