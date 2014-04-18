@@ -6,13 +6,13 @@ describe('db.test', function() {
     it.only('db query', function(done) {
         conn.createConnection();
         assert(conn.connection.escape instanceof Function);
-        conn.query('SELECT * FROM CM_CortexDependencies', function(err, result) {
+        conn.query('SELECT * FROM CM_CortexPackageDependencies', function(err, result) {
             done(err);
         });
     });
 
     it('db insert', function(done) {
-        conn.query('INSERT INTO CM_CortexDependencies {{values record}} ON DUPLICATE KEY {{update update}}', {
+        conn.query('INSERT INTO CM_CortexPackageDependencies {{values record}} ON DUPLICATE KEY {{update update}}', {
             record: {
                 Name: 'am',
                 Version: '0.2.3',
