@@ -31,7 +31,8 @@
     "express": "~3.2.6",
     "path-extra": "~0.1.1",
     "dplion": "git+http://code.dianpingoa.com/f2e/lion.git",
-    "underscore": "^1.6.0"
+    "underscore": "^1.6.0",
+    "read-cortex-json": "^0.1.1"
   },
   "devDependencies": {
     "mocha": "~1.12.0",
