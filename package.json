@@ -4,7 +4,7 @@
   "description": "A provider for dependency analytics and combo strategy",
   "main": "index.js",
   "bin": {
-    "neocortexsync": "bin/neocortex-cli.js"
+    "neocortexsync-canary": "bin/neocortex-cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,7 +32,7 @@
     "path-extra": "~0.1.1",
     "dplion": "git+http://code.dianpingoa.com/f2e/lion.git",
     "underscore": "^1.6.0",
-    "read-cortex-json": "^0.1.1"
+    "read-cortex-json": "^2.0.0"
   },
   "devDependencies": {
     "mocha": "~1.12.0",
