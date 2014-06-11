@@ -1,6 +1,6 @@
 {
   "name": "neocortex-sync",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A provider for dependency analytics and combo strategy",
   "main": "index.js",
   "bin": {
